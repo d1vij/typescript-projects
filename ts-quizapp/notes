@@ -1,0 +1,8 @@
+create quiz 
+-quiz name
+-add question -> opens new question ui
+    -question name
+    -add options
+        -one option would be correct option -> through radio button
+-delete question
+-save question

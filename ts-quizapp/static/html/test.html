@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <button id="1" class="b">Button1</button>
+        <button id="2" class="b">Button2</button>
+    </div>
+
+    
+    <script>
+        document.getElementById("parent").addEventListener("click", (event)=>{
+            event.stopPropagation();
+            if(event.target.classList.contains("b")){
+            console.log(event.target.getAttribute("id"));}
+        })
+        
+    </script>
+</body>
+</html

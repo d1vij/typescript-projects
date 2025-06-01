@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz!</title>
+
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../../dist/index.js" defer></script>
+</head>
+
+<body>
+    <button id="new-question">Add New Question</button>
+    <div id="questions">
+        <div class="question" hidden data-question-index="1">
+            <input type="text" class="question-title-input">Question Title Here</i>
+            <ol>
+                <li class="question-option" data-question-id="1">First Option</li>
+                <li class="question-option" data-question-id="2">Second Option</li>
+                <li class="question-option" data-question-id="3">Third Option</li>
+                <li class="question-option" data-question-id="4">Fourth Option</li>
+            </ol>
+            <button id="new-option">Add option</button>
+
+            <label for="question-answer">
+                <span>Correct Option</span>
+                <select id="question-answer" name="answer">
+                    <option value="" disabled selected>Select Correct Option</option>
+                    <option value="1">First Option</option>
+                    <option value="2">Second Option</option>
+                    <option value="3">Third Option</option>
+                    <option value="4">Fourth Option</option>
+                </select>
+            </label>
+
+            <button id="question-save">Save Question</button>
+
+        </div>
+    </div>
+    <form class="question-form">
+        <input type="text" class="question-title-input">Question Title Here</i>
+        <ol id="option-list">
+            <li id="option-1">
+                <p>first option</p> <button id="1" onclick="deleteOption()">delete</button>
+            </li>
+        </ol>
+        <button id="new-option">Add option</button>
+
+        <label for="question-answer">
+            <span>Correct Option</span>
+            <select id="question-answer" name="answer">
+                <option value="" disabled selected>Select Correct Option</option>
+            </select>
+        </label>
+        <button id="question-save">Save Question</button>
+    </form>
+
+
+
+
+    </div>
+</body>
+
+</html>

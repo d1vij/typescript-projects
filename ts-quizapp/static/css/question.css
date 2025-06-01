@@ -1,0 +1,35 @@
+.question-div {
+    background-color: aqua;
+    max-width: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.question-title-input{
+    text-align: left;
+    font-size: medium;
+    border-radius: 0px;
+}
+
+.options{
+    display: flex;
+    max-width: fit-content;
+    flex-wrap: wrap;
+}
+.question-option{
+    padding-right: 20px;
+    box-sizing: border-box;
+    flex: 0 0 25%;
+}
+
+
+.option-input{
+    border-radius: 10px;
+}
+.add-option{
+    border-radius: 0;
+}
+.option-input-span{
+    padding-top: 5px;
+    
+}

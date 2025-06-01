@@ -231,13 +231,13 @@ interface IAsciiHTMLConfig {
     gridSize: number,
     density: "HIGH" | "LOW" | "custom" | string,
     customValue?: string,
-    height?: number,
-    width?: number
+    resize_height: number,
+    resize_width: number
 }
 
 
 export async function convertToAsciiHTML(config:IAsciiHTMLConfig) {
-    let { _image, gridSize, density,customValue } = config;
+    let { _image, gridSize, density, customValue, resize_height, resize_width} = config;
 
     let _densityString = ""
     if(density==="custom"){
@@ -249,6 +249,8 @@ export async function convertToAsciiHTML(config:IAsciiHTMLConfig) {
     const scaleFactor = (_densityString.length - 1) / 255
 
     let _outTextArray: string[][] = [];
+    
+    _image = _image.resize({height:resize_height, width:resize_width})
     
     const { width, height, data, channels } = _image;
     const pixelData = data;

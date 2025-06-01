@@ -18,9 +18,9 @@
             </div>
 
             <div id="gridsizediv">
-                <span>Set grid size <br><i>(lower the number higher the quality, larger the output ascii)</i></span>
+                <span>Set sample size <br><i>(lower the number higher the quality, larger the output ascii)</i></span>
                 <input id="gridsize" type="range" min="1" max="20" step="1" value="8" name="gridsize">
-                <p id="gridsizetxt"></p>
+                <p id="gridsizetxt">Sample Size 8</p>
             </div>
 
             <div id="densitydiv">
@@ -34,7 +34,7 @@
                     High
                 </label>
                 <label for="density-custom">
-                    <input id="density-custom" type="radio" name="density" value="custom" checked>
+                    <input id="density-custom" type="radio" name="density" value="custom">
                     Custom charset
                     <input id="custom-density" name="custom-density" type="text" placeholder="eg  .:-=+*#%@">
                     <span id="density-custom-info"><br>(ensure that all characters are escaped,<br> order by darkest to
@@ -51,6 +51,11 @@
 
 
             <button type="button" id="generate">Generate</button>
+            <div id="copy-buttons" hidden>
+                <button type="button" id="copy-ascii" hidden>Copy ascii to clipboard (colorless)</button>
+                <button type="button" id="copy-html" hidden>Copy html to clipboard <br>(as preformatted text)</button>
+            </div>
+            
         </div>
 
         <div id="output">

@@ -44,6 +44,7 @@ input {
     flex-direction: column;
     background-color: pink;
     text-align: center;
+    width: 100%;
 }
 
 
@@ -74,6 +75,17 @@ input {
     cursor: pointer;
 }
 
+#copy-buttons{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#copy-ascii{
+    width: 100%;
+}
+#copy-html{
+    width: 100%;
+}
 
 #output {
     background-color: black;

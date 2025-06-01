@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii Converter</title>
+    <link rel="stylesheet" href="./style.css">
+  <script async type="module" crossorigin src="/assets/index-CceozYwG.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div id="input">
+            <div id="photoinputdiv">
+                <button type="button" id="select-image">Select Image</button>
+                <p id="image-name">Image name here</p>
+            </div>
+
+            <div id="gridsizediv">
+                <span>Set sample size <br><i>(lower the number higher the quality, larger the output ascii)</i></span>
+                <input id="gridsize" type="range" min="1" max="20" step="1" value="8" name="gridsize">
+                <p id="gridsizetxt">Sample Size 8</p>
+            </div>
+
+            <div id="densitydiv">
+                <span>Set ascii density</span>
+                <label for="density-low">
+                    <input id="density-low" type="radio" name="density" value="LOW">
+                    Low
+                </label>
+                <label for="density-high">
+                    <input id="density-high" type="radio" name="density" value="HIGH" checked>
+                    High
+                </label>
+                <label for="density-custom">
+                    <input id="density-custom" type="radio" name="density" value="custom">
+                    Custom charset
+                    <input id="custom-density" name="custom-density" type="text" placeholder="eg  .:-=+*#%@">
+                    <span id="density-custom-info"><br>(ensure that all characters are escaped,<br> order by darkest to
+                        lightest(left→right))<br>DO-NOT include quotes in the start and end of string)</span>
+                </label>
+            </div>
+            <div id="dimensionsdiv">
+                Ascii Height
+                <input type="number" placeholder="1-10000" name="height" value="200" min="0" max="10000">
+                <br>
+                Ascii Width
+                <input type="number" placeholder="1-10000" name="width" value="200" min="0" max="10000">
+            </div>
+
+
+            <button type="button" id="generate">Generate</button>
+            <div id="copy-buttons" hidden>
+                <button type="button" id="copy-ascii" hidden>Copy ascii to clipboard (colorless)</button>
+                <button type="button" id="copy-html" hidden>Copy html to clipboard <br>(as preformatted text)</button>
+            </div>
+            
+        </div>
+
+        <div id="output">
+        </div>
+
+
+    </div>
+</body>
+
+</html>

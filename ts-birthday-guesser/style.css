@@ -99,3 +99,59 @@ button:hover {
     color: hsl(0, 0%, 50%);
     text-transform: uppercase;
 }
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .dates {
+        width: 100%;
+        align-items: center;
+    }
+
+    .dates li {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .mid {
+        min-width: unset;
+        width: 100%;
+        align-items: center;
+    }
+
+    .selectors {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 100px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    #current-date {
+        font-size: 1rem;
+        min-width: 150px;
+    }
+
+    .tries {
+        font-size: 1.1rem;
+    }
+
+    #inspiration {
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+}

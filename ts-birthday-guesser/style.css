@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 93%);
+    margin: 0;
+    font-family: monospace;
+    user-select: none;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dates {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+}
+
+.dates li {
+    font-size: 1rem;
+    margin: 4px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: monospace;
+    color: hsl(0, 0%, 50%);
+}
+.mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 95px;
+}
+
+.selectors {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+button {
+    height: 35px;
+    width: 70px;
+    font-size: 1rem;
+    border: 1px solid hsl(0, 0%, 75%);
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: monospace;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 85%);
+}
+
+#current-date {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid hsl(0, 0%, 75%);
+    min-width: 130px;
+    text-align: center;
+}
+
+.tries {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 15px;
+    color: black;
+}
+#inspiration{
+    color: hsl(0, 0%, 50%);
+    text-transform: uppercase;
+}

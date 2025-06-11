@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--@d1vij-->
+    <title>BadUI birthday selector</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer type="module"></script>
+</head>
+<body>
+    <div class="content">
+        <h1 class="title">Is this your birthday?</h1>
+        <div class="row">
+            <div class="earlier-dates">
+                <ul id="earlier-dates-list-elm" class="dates"></ul>
+            </div>
+
+            <div class="mid">
+                <div class="selectors">
+                    <button id="earlier">Earlier</button>
+                    <span id="current-date"></span>
+                    <button id="later">Later</button>
+                </div>
+                <div class="tries">
+                    Guesses
+                    <span id="tries-display"></span>
+                </div>
+            </div>  
+            
+            <div class="later-dates" >
+                <ul id="later-dates-list-elm"class="dates" ></ul>
+            </div>
+        </div>
+        <a id="inspiration" href="https://www.reddit.com/r/badUIbattles/comments/pycos8/a_fun_way_to_select_your_birthday/">Inspired by</a>
+    </div>
+</body>
+</html>

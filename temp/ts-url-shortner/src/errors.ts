@@ -1,0 +1,5 @@
+export enum Errors {
+    INVALID_URL_CODE = 100,
+    USERNAME_NOT_FOUND,
+    USERNAME_EXISTS
+}

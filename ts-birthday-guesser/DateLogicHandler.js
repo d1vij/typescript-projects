@@ -1,4 +1,4 @@
-gitexport class DateLogicHandler {
+export class DateLogicHandler {
     minDate;
     maxDate;
     currDate = new Date();

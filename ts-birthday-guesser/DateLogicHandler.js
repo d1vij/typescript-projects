@@ -1,9 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DateLogicHandler = void 0;
-class DateLogicHandler {
+gitexport class DateLogicHandler {
+    minDate;
+    maxDate;
+    currDate = new Date();
     constructor() {
-        this.currDate = new Date();
         this.minDate = new Date(1900, 0, 1);
         this.maxDate = new Date(Date.now());
     }
@@ -47,5 +46,4 @@ class DateLogicHandler {
         return this.currDate;
     }
 }
-exports.DateLogicHandler = DateLogicHandler;
 /**@d1vij */

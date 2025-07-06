@@ -1,6 +1,6 @@
-import { Errors } from "../../errors.js";
+import { Errors } from "../../public/errors.js";
 
-export interface IAuthResponses {
-    error?: Errors,
+export interface IAuthResponse {
+    error_code?: Errors,
     status?: "success" | "error"
 }

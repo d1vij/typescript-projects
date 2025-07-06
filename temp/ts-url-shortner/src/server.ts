@@ -4,13 +4,19 @@
 import express from "express";
 import chalk from "chalk";
 import {connect} from "./database.js";
+import path from "path";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 import UrlShortenerRouter from "./components/url-shortner/router.js";
 import AuthRouter from "./components/auth/router.js";
 import { logger } from "./logger.js";
-import path from "path";
+import { URI } from "./conn.js";
 
-export const URI = "mongodb+srv://vermadivij:databasepassword@cluster1.lzjrylx.mongodb.net/"
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
 const VIEWS_FOLDER = path.join(path.dirname(__filename), "./views")
 
 
@@ -18,10 +24,13 @@ const app = express();
 
 //middlewares
 app.use(logger);
+app.use("/public", express.static(path.join(__dirname,"./public")))
+
 
 //routers
 app.use("/", AuthRouter);
 app.use("/api", UrlShortenerRouter);
+
 
 app.set("view engine", "ejs");
 app.set("views",  VIEWS_FOLDER);

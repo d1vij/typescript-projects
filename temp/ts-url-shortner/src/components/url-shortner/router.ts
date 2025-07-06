@@ -6,7 +6,6 @@ import { validateUserAuthentication } from "../auth/validator.js";
 
 const router = express.Router();
 
-router.use();
 
 router.get("/shorten/:encodedUri",validateUserAuthentication, shortenUrl);
 router.get("/get-url/:code",getUrl)

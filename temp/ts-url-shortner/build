@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+echo "build started"
+tsc
+echo "typescript transpilation done"
+
+mkdir -p dist/views
+mkdir -p dist/public/css
+
+cp -r src/public/css dist/public/
+cp -r src/views dist/
+echo "static content moved"
+echo "build finished"

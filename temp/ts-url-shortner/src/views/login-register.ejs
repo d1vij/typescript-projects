@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= process %>
+    </title>
+    <% if (process=="login" ) { %>
+        <script type="module" src="/public/scripts/login.js"></script>
+    <% } else { %>
+        <script type="module" src="/public/scripts/register.js"></script>
+    <% } %>
+    <link rel="stylesheet" href="/public/css/login-register.css">
+</head>
+    <body>
+        <form id="<%= process  %>">
+            <label>
+                Username
+                <input type="text" name="username" id="username" required>
+            </label>
+            <label>
+                Password
+                <input type="password" name="password" id="password" required>
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="popup">
+            <button id="close-popup"></button>
+            <div id="content"></div>
+        </div>
+
+    </body>
+
+</html>

@@ -1,5 +1,6 @@
 export enum Errors {
     INVALID_URL_CODE = 100,
     USERNAME_NOT_FOUND,
+    INCORRECT_PASSWORD,
     USERNAME_EXISTS
 }

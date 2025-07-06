@@ -1,4 +1,4 @@
-import { DateLogicHandler } from "./DateLogicHandler.js";
+import { DateLogicHandler } from "./src/DateLogicHandler.js";
 const LowerButton = document.querySelector("button#earlier");
 const HigherButton = document.querySelector("button#later");
 const CurrentDateText = document.querySelector("span#current-date");

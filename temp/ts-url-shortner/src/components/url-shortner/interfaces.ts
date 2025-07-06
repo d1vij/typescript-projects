@@ -1,4 +1,4 @@
-import { Errors } from "../../errors.js"
+import { Errors } from "../../public/errors.js"
 
 export interface IURL {
     code:string,
@@ -20,4 +20,6 @@ export interface IRevokeUrlResponse{
     error_code?:Errors
 }
 
-export interface IGetAllCodesResponse
+export interface IGetAllCodesResponse{
+    found_codes?:string[]
+}

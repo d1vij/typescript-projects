@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { customAlphabet } from "nanoid";
 
 import { IGetAllCodesResponse, IGetUrlFromCodeResponse, IRevokeUrlResponse, IShortenedUrlResponse, IURL } from "./interfaces.js";
-import { Errors } from "../../errors.js";
+import { Errors } from "../../public/errors.js";
 
 import UrlDB from "../../models/urls.js";
 import UserDataDB from "../../models/user-data.js";
@@ -78,6 +78,7 @@ export async function getALlCodes(request:Request, response:Response){
     const _document = await UserDataDB.findOne({user_id});
 
     response.json({
-        found: _document?.owned_codes
+        found_codes: _document?.owned_codes
     } as IGetAllCodesResponse)
+    return;
 }
